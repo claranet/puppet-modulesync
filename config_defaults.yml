@@ -44,6 +44,7 @@ Rakefile:
     - 'disable_80chars'
     - 'disable_140chars'
     - 'disable_class_inherits_from_params_class'
+    - 'disable_legacy_facts'
   default_enabled_rake_targets:
     - 'metadata_lint'
     - 'syntax'

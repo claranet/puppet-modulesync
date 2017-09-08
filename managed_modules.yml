@@ -1,0 +1,9 @@
+---
+- puppet-consul_template
+- puppet-magento
+- puppet-masq
+- puppet-newrelic
+- puppet-timezone
+- puppet-openvpn
+- puppet-phpfpm
+- puppet-varnish

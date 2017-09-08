@@ -1,0 +1,73 @@
+---
+.gitignore:
+  paths:
+    - '*.log'
+
+Gemfile:
+  required:
+    test:
+      - gem: rake
+      - gem: puppet-lint
+      - gem: puppet-lint-absolute_classname-check
+      - gem: puppet-lint-alias-check
+      - gem: puppet-lint-package_ensure-check
+      - gem: puppet-lint-legacy_facts-check
+      - gem: puppet-lint-leading_zero-check
+      - gem: puppet-lint-global_resource-check
+      - gem: puppet-lint-file_source_rights-check
+      - gem: puppet-lint-file_ensure-check
+      - gem: puppet-lint-empty_string-check
+      - gem: puppet-lint-classes_and_types_beginning_with_digits-check
+      - gem: rspec-puppet-facts
+      - gem: rspec-puppet-utils
+      - gem: puppet-syntax
+      - gem: safe_yaml
+        version: '~> 1.0.4'
+      - gem: rspec-puppet
+        version: '~> 2.5'
+      - gem: metadata-json-lint
+      - gem: json
+        version: '< 2.0.0'
+    development:
+      - gem: travis
+      - gem: travis-lint
+      - gem: vagrant-wrapper
+      - gem: puppet-blacksmith
+      - gem: guard-rake
+    system_tests:
+      - gem: beaker
+
+Rakefile:
+  default_disabled_lint_checks:
+    - 'disable_80chars'
+    - 'disable_140chars'
+    - 'disable_class_inherits_from_params_class'
+  default_enabled_rake_targets:
+    - 'metadata_lint'
+    - 'syntax'
+    - 'lint'
+    - 'spec'
+
+.travis.yml:
+  includes:
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 4.6.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 4.7.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 4.8.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 4.9.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 4.10.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 5.0.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development
+  - rvm: 2.4.1
+    env: PUPPET_VERSION="~> 5.1.0" CHECK=test STRICT_VARIABLES=yes
+    bundler_args: --without system_tests development

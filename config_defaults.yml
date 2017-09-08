@@ -26,6 +26,7 @@ Gemfile:
       - gem: rspec-puppet
         version: '~> 2.5'
       - gem: metadata-json-lint
+      - gem: xmlrpc
       - gem: json
         version: '< 2.0.0'
     development:
@@ -34,6 +35,7 @@ Gemfile:
       - gem: vagrant-wrapper
       - gem: puppet-blacksmith
       - gem: guard-rake
+
     system_tests:
       - gem: beaker
 

@@ -1,3 +1,4 @@
 ---
 namespace: claranet
 message: "Modulesync"
+branch: puppet3

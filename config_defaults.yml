@@ -54,23 +54,5 @@ Rakefile:
 .travis.yml:
   includes:
   - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 4.6.0" CHECK=test STRICT_VARIABLES=yes
-    bundler_args: --without system_tests development
-  - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 4.7.0" CHECK=test STRICT_VARIABLES=yes
-    bundler_args: --without system_tests development
-  - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 4.8.0" CHECK=test STRICT_VARIABLES=yes
-    bundler_args: --without system_tests development
-  - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 4.9.0" CHECK=test STRICT_VARIABLES=yes
-    bundler_args: --without system_tests development
-  - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 4.10.0" CHECK=test STRICT_VARIABLES=yes
-    bundler_args: --without system_tests development
-  - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 5.0.0" CHECK=test STRICT_VARIABLES=yes
-    bundler_args: --without system_tests development
-  - rvm: 2.4.1
-    env: PUPPET_VERSION="~> 5.1.0" CHECK=test STRICT_VARIABLES=yes
+    env: PUPPET_VERSION="~> 3.8.7" CHECK=test STRICT_VARIABLES=yes
     bundler_args: --without system_tests development
